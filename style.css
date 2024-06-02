@@ -1,0 +1,110 @@
+body {
+  background-color: #0f141a;
+  display: flex;
+  height: calc(100vh - 65px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+svg {
+  width: 70vmin;
+  height: 70vmin;
+  max-height: 400px;
+  max-width: 400px;
+}
+.circleDraw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 900;
+  animation: drawMe 3000ms ease-in-out forwards;
+}
+.tenText {
+  animation: textLoop 3000ms linear forwards;
+}
+.oneText {
+  animation: textOneLoop 3000ms linear forwards;
+  animation-direction: backwards;
+}
+.rotateCirc {
+  transform-origin: 50% 50%;
+  animation: rotAnim 3000ms ease-in-out forwards;
+}
+@keyframes rotAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes drawMe {
+  0% {
+    stroke-dashoffset: 900;
+  }
+  80% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+@keyframes textLoop {
+  0% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-218%);
+  }
+  100% {
+    transform: translateY(-218%);
+  }
+}
+@keyframes textOneLoop {
+  0% {
+    transform: translateY(0);
+  }
+  1% {
+    transform: translateY(218%);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  21% {
+    transform: translateY(218%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  41% {
+    transform: translateY(218%);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+  61% {
+    transform: translateY(218%);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+button {
+  margin-top: 24px;
+  color: #61ffbc;
+  background-color: transparent;
+  border: 1px solid #61ffbc;
+  border-radius: 999px;
+  padding: 8px 24px;
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  opacity: 0.7;
+}
